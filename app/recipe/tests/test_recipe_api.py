@@ -44,7 +44,7 @@ def create_recipe(user, **params):
     defaults = {
         'title': 'Sample recipe title',
         'time_minutes': 22,
-        'price': Decimal(5.25),
+        'price': Decimal('5.25'),
         'description': 'Sample description',
         'link': 'http://example.com/recipe.pdf'
     }
@@ -235,7 +235,7 @@ class PrivateRecipeApiTests(TestCase):
         payload = {
             'title': 'Pongal',
             'time_minutes': 60,
-            'price': Decimal(4.50),
+            'price': Decimal('4.50'),
             'tags': [{'name': 'Indian'}, {'name': 'Breakfast'}],
         }
         res = self.client.post(RECIPES_URL, payload, format='json')
